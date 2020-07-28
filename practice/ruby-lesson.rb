@@ -149,46 +149,80 @@
 # end
 
 
-def register_review(reviews)
-    puts "商品名を入力して下さい"
-    input_name = gets.chomp
-    puts "感想を入力して下さい"
-    input_impression = gets.chomp
+# def register_review(reviews)
+#     puts "商品名を入力して下さい"
+#     input_name = gets.chomp
+#     puts "感想を入力して下さい"
+#     input_impression = gets.chomp
 
-    review = {name:input_name, impression:input_impression}
-    reviews << review
+#     review = {name:input_name, impression:input_impression}
+#     reviews << review
 
-    puts "登録しました"
-end
+#     puts "登録しました"
+# end
 
-def show_review(reviews)
-    reviews.each do |review|
-        puts "----------------------------"
-        puts "商品名：#{review[:name]}"
-        puts "感想：#{review[:impression]}"
+# def show_review(reviews)
+#     reviews.each do |review|
+#         puts "----------------------------"
+#         puts "商品名：#{review[:name]}"
+#         puts "感想：#{review[:impression]}"
 
-    end
-end
+#     end
+# end
 
-reviews = []
+# reviews = []
+# while true do
+#     puts "番号を入力してください"
+#     puts "[1] レビューを登録する"
+#     puts "[2] レビューの一覧を見る"
+#     puts "[3] アプリを終了する。"
+
+#     input = gets.to_i
+
+#     case input
+#     when 1
+#         register_review(reviews)
+
+#     when 2
+#         show_review(reviews)
+    
+#     when 3
+#         exit
+    
+#     end
+
+# end
+
+
+
 while true do
-    puts "番号を入力してください"
-    puts "[1] レビューを登録する"
-    puts "[2] レビューの一覧を見る"
-    puts "[3] アプリを終了する。"
+    puts "ココはバーだよ。年齢を入力してね"
+    input = gets.chomp.to_i
 
-    input = gets.to_i
+    if input >= 20
+        while true do
+            puts "お酒のご注文をどうぞ"
+            order = gets.chomp
 
-    case input
-    when 1
-        register_review(reviews)
+            if order == "ビール"
+                puts "はい！#{order}です！"
+                puts "ご注文ありがとうございました！"
+                exit
 
-    when 2
-        show_review(reviews)
+            elsif order == "ウイスキー"
+                puts "はい！#{order}です！"
+                puts "ご注文ありがとうございました！"
+                exit
+
+            else puts "ごめんなさい、おいてないんです。。。"
+            end
+            
+        end
+
     
-    when 3
+    else input < 20
+        puts "ケツの青いガキは帰りな！"
         exit
-    
     end
 
 end
