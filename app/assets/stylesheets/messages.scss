@@ -1,3 +1,67 @@
-// Place all the styles related to the messages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "./color";
+
+.main {
+    height: calc(100vh - 80px);  // vhは「viewport height」の略で、viewport の高さ（ブラウザの高さ）に対する指定です。100vhで表示しているスマホやPCのウィンドウサイズの100%という意味になります 
+    .chat {
+        padding: 0 20px;
+        height: calc(100vh - 160px);
+        background-color: $back-color;
+        .chat-list{
+            max-height: calc(100vh-170px); overflow-y: auto;
+            width: 90%;
+            margin: 0 auto;
+            .chat-main{
+                margin: 10px;
+                background-color: white;
+                border-radius: 5px;
+                padding: 5px;
+                display: flex;
+                justify-content: space-between;
+                .chat-text{
+
+                }
+                .chat-button{
+                    ul{
+                        li{
+                            background-color: $sub-color;
+                            border-radius: 5px;
+                            padding: 5px 40px;
+                            margin: 10px;
+                            text-align:center;
+                            a{
+                                color: #ffffff;
+                                font-weight: bold;
+                                text-decoration: none;
+                                width: 100%;
+                                display: block;
+                            }
+                            
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    
+    .chat-form {
+        height: 80px;
+        padding: 20px;
+        background-color: $sub-color;
+
+        input[type=text]{
+            height:40px;
+            width:80%;
+            border-radius: 5px;
+        }
+
+        input[type=submit]{
+            height:40px;
+            width:19%;
+            background-color: $main-color;
+            border-radius: 5px;
+            color: #ffffff;
+            font-weight: bold;
+        }
+    }
+}
